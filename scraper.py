@@ -68,12 +68,21 @@ def main():
     5. If there ARE relevant new programs, return a concise Telegram markdown alert listing Company, Role Title, Category, and Status/Deadline.
     """
     
-    candidate_models = [
-        "gemini-1.5-flash-latest",
-        "gemini-1.5-pro-latest",
-        "gemini-1.5-flash",
-        "gemini-1.5-pro"
-    ]
+    # STOP GUESSING: Dynamically list models available to this specific API key
+    print("Querying Google AI for authorized models...")
+    candidate_models = []
+    try:
+        # Ask the API directly what models exist for this account
+        for m in client.models.list():
+            # Filter for fast text-generation models
+            if "flash" in m.name.lower() or "pro" in m.name.lower():
+                # Clean up "models/gemini..." prefix if present
+                clean_name = m.name.replace("models/", "")
+                candidate_models.append(clean_name)
+    except Exception as e:
+        print(f"Failed to list models from API: {e}")
+        
+    print(f"Discovered authorized models: {candidate_models}")
     
     response = None
     for model_name in candidate_models:
@@ -86,11 +95,11 @@ def main():
             print(f"Successfully used model: {model_name}")
             break
         except Exception as e:
-            print(f"Model {model_name} unavailable: {e}")
+            print(f"Model {model_name} failed: {e}")
             continue
             
     if not response:
-        raise RuntimeError("Could not generate content with any available Gemini model.")
+        raise RuntimeError("Could not generate content with ANY discovered model. Your API key may have text generation completely restricted.")
     
     analysis = response.text.strip()
     
