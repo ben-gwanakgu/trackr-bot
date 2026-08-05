@@ -68,10 +68,30 @@ def main():
     5. If there ARE relevant new programs, return a concise Telegram markdown alert listing Company, Role Title, Category, and Status/Deadline.
     """
     
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
+    candidate_models = [
+        "gemini-2.5-flash",
+        "gemini-2.0-flash",
+        "gemini-1.5-flash",
+        "gemini-2.5-flash-lite",
+        "gemini-2.0-flash-lite"
+    ]
+    
+    response = None
+    for model_name in candidate_models:
+        try:
+            print(f"Attempting analysis with {model_name}...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt
+            )
+            print(f"Successfully used model: {model_name}")
+            break
+        except Exception as e:
+            print(f"Model {model_name} unavailable: {e}")
+            continue
+            
+    if not response:
+        raise RuntimeError("Could not generate content with any available Gemini model.")
     
     analysis = response.text.strip()
     
