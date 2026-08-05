@@ -34,6 +34,10 @@ def send_telegram(message):
         return False
 
 def main():
+    # FORCE TELEGRAM TEST PING AT THE VERY START
+    print("Sending mandatory test message to Telegram...")
+    send_telegram("🧪 Trackr Bot Test Connection!\nIf you see this, your Telegram Bot and Chat ID are working perfectly!")
+
     print("Fetching page content...")
     current_text = fetch_page_text()
     
@@ -41,14 +45,6 @@ def main():
     if os.path.exists(SNAPSHOT_FILE):
         with open(SNAPSHOT_FILE, "r", encoding="utf-8") as f:
             previous_text = f.read()
-            
-    # FORCE TEST RUN: If snapshot is empty or less than 50 chars, send baseline ping
-    if not previous_text or len(previous_text.strip()) < 50:
-        print("Baseline setup/reset detected. Saving baseline snapshot...")
-        with open(SNAPSHOT_FILE, "w", encoding="utf-8") as f:
-            f.write(current_text)
-        send_telegram("🚀 Trackr Bot Initialized!\nBaseline snapshot saved successfully. You will receive alerts when new schemes open.")
-        return
 
     print("Analyzing changes using Gemini...")
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
@@ -76,21 +72,8 @@ def main():
     5. If there ARE relevant new programs, return a concise summary listing Company, Role Title, Category, and Status/Deadline.
     """
     
-    print("Querying Google AI for authorized models...")
-    candidate_models = []
-    try:
-        for m in client.models.list():
-            for action in getattr(m, 'supported_actions', []):
-                if action == "generateContent":
-                    clean_name = m.name.replace("models/", "")
-                    candidate_models.append(clean_name)
-    except Exception as e:
-        print(f"Failed to list models from API: {e}")
-        
-    if not candidate_models:
-        candidate_models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
-        
-    print(f"Discovered authorized models: {candidate_models}")
+    # Priority order for standard models
+    candidate_models = ["gemma-4-31b-it", "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
     
     response = None
     for model_name in candidate_models:
@@ -107,7 +90,7 @@ def main():
             continue
             
     if not response:
-        raise RuntimeError("Could not generate content with ANY discovered model.")
+        raise RuntimeError("Could not generate content with ANY model.")
     
     analysis = response.text.strip()
     print(f"Gemini Analysis Output:\n{analysis}")
