@@ -45,7 +45,7 @@ def main():
     print("Analyzing changes using Gemini...")
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
     
-    prompt = f"""
+   prompt = f"""
     You are an automated job tracking assistant.
     Compare these two text dumps from a UK Finance Graduate Scheme tracker page.
     
@@ -57,9 +57,15 @@ def main():
     
     Task:
     1. Identify any NEW graduate schemes that opened, deadline updates, or status changes.
-    2. Ignore minor visual or layout updates.
-    3. If there are NO new graduate programs or major updates, reply strictly with: "NO_CHANGES"
-    4. If there ARE new programs, return a concise Telegram markdown alert listing Company, Role Title, and Status/Deadline.
+    2. STRICT FILTERING RULE: Completely IGNORE and EXCLUDE any roles falling under these subcategories:
+       - Bulge Bracket
+       - Elite Boutique
+       - Buy-Side
+       - Trading & Quant
+       - Real Estate
+    3. Ignore minor visual or layout updates.
+    4. If there are NO new graduate programs or major updates in the remaining allowed categories, reply strictly with: "NO_CHANGES"
+    5. If there ARE relevant new programs, return a concise Telegram markdown alert listing Company, Role Title, Category, and Status/Deadline.
     """
     
     response = client.models.generate_content(
