@@ -24,7 +24,14 @@ def send_telegram(message):
         return
         
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    requests.post(url, json={"chat_id": chat_id, "text": message, "parse_mode": "Markdown"})
+    # Removed parse_mode to prevent Markdown formatting silent drops
+    response = requests.post(url, json={"chat_id": chat_id, "text": message})
+    
+    # Print result to logs so we can see if Telegram accepted it
+    if response.status_code == 200:
+        print("Telegram message delivered successfully!")
+    else:
+        print(f"Telegram failed with status code {response.status_code}: {response.text}")
 
 def main():
     print("Fetching page content...")
@@ -39,7 +46,7 @@ def main():
         print("First run detected. Storing baseline snapshot...")
         with open(SNAPSHOT_FILE, "w", encoding="utf-8") as f:
             f.write(current_text)
-        send_telegram("🚀 *Trackr Bot Initialized!*\nBaseline snapshot created. You'll receive daily alerts when new finance graduate schemes open.")
+        send_telegram("🚀 Trackr Bot Initialized!\nBaseline snapshot created. You'll receive daily alerts when new finance graduate schemes open.")
         return
 
     print("Analyzing changes using Gemini...")
@@ -65,18 +72,14 @@ def main():
        - Real Estate
     3. Ignore minor visual or layout updates.
     4. If there are NO new graduate programs or major updates in the remaining allowed categories, reply strictly with: "NO_CHANGES"
-    5. If there ARE relevant new programs, return a concise Telegram markdown alert listing Company, Role Title, Category, and Status/Deadline.
+    5. If there ARE relevant new programs, return a concise summary listing Company, Role Title, Category, and Status/Deadline.
     """
     
-    # STOP GUESSING: Dynamically list models available to this specific API key
     print("Querying Google AI for authorized models...")
     candidate_models = []
     try:
-        # Ask the API directly what models exist for this account
         for m in client.models.list():
-            # Filter for fast text-generation models
             if "flash" in m.name.lower() or "pro" in m.name.lower():
-                # Clean up "models/gemini..." prefix if present
                 clean_name = m.name.replace("models/", "")
                 candidate_models.append(clean_name)
     except Exception as e:
@@ -107,7 +110,7 @@ def main():
         print("No updates detected on target page.")
     else:
         print("New updates found! Sending notification...")
-        send_telegram(f"🔔 *Trackr Alert: New Graduate Schemes Found!*\n\n{analysis}")
+        send_telegram(f"🔔 Trackr Alert: New Graduate Schemes Found!\n\n{analysis}")
         
         with open(SNAPSHOT_FILE, "w", encoding="utf-8") as f:
             f.write(current_text)
