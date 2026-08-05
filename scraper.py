@@ -20,18 +20,18 @@ def send_telegram(message):
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     if not token or not chat_id:
-        print("Missing Telegram credentials.")
-        return
+        print("Error: Missing Telegram credentials in environment variables.")
+        return False
         
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    # Removed parse_mode to prevent Markdown formatting silent drops
     response = requests.post(url, json={"chat_id": chat_id, "text": message})
     
-    # Print result to logs so we can see if Telegram accepted it
     if response.status_code == 200:
         print("Telegram message delivered successfully!")
+        return True
     else:
-        print(f"Telegram failed with status code {response.status_code}: {response.text}")
+        print(f"Telegram API Error ({response.status_code}): {response.text}")
+        return False
 
 def main():
     print("Fetching page content...")
@@ -42,11 +42,12 @@ def main():
         with open(SNAPSHOT_FILE, "r", encoding="utf-8") as f:
             previous_text = f.read()
             
-    if not previous_text:
-        print("First run detected. Storing baseline snapshot...")
+    # FORCE TEST RUN: If snapshot is empty or less than 50 chars, send baseline ping
+    if not previous_text or len(previous_text.strip()) < 50:
+        print("Baseline setup/reset detected. Saving baseline snapshot...")
         with open(SNAPSHOT_FILE, "w", encoding="utf-8") as f:
             f.write(current_text)
-        send_telegram("🚀 Trackr Bot Initialized!\nBaseline snapshot created. You'll receive daily alerts when new finance graduate schemes open.")
+        send_telegram("🚀 Trackr Bot Initialized!\nBaseline snapshot saved successfully. You will receive alerts when new schemes open.")
         return
 
     print("Analyzing changes using Gemini...")
@@ -79,11 +80,15 @@ def main():
     candidate_models = []
     try:
         for m in client.models.list():
-            if "flash" in m.name.lower() or "pro" in m.name.lower():
-                clean_name = m.name.replace("models/", "")
-                candidate_models.append(clean_name)
+            for action in getattr(m, 'supported_actions', []):
+                if action == "generateContent":
+                    clean_name = m.name.replace("models/", "")
+                    candidate_models.append(clean_name)
     except Exception as e:
         print(f"Failed to list models from API: {e}")
+        
+    if not candidate_models:
+        candidate_models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
         
     print(f"Discovered authorized models: {candidate_models}")
     
@@ -102,9 +107,10 @@ def main():
             continue
             
     if not response:
-        raise RuntimeError("Could not generate content with ANY discovered model. Your API key may have text generation completely restricted.")
+        raise RuntimeError("Could not generate content with ANY discovered model.")
     
     analysis = response.text.strip()
+    print(f"Gemini Analysis Output:\n{analysis}")
     
     if "NO_CHANGES" in analysis:
         print("No updates detected on target page.")
