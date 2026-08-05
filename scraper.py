@@ -45,7 +45,7 @@ def main():
     print("Analyzing changes using Gemini...")
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
     
-   prompt = f"""
+    prompt = f"""
     You are an automated job tracking assistant.
     Compare these two text dumps from a UK Finance Graduate Scheme tracker page.
     
