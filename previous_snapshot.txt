@@ -10,7 +10,7 @@ Account
 2027 internships in Germany are open! Access Germany Tracker – Click Here 
 UK Finance Tracker
 Get Notifications
-524,041 total views / 15,996 views today
+626,331 total views / 15,352 views today
 Summer Internships
 Spring Weeks
 Off-Cycle Internships
@@ -160,6 +160,10 @@ CV
 	Yes	
  Middle Market
 
+	Harris Williams	Investment Banking 1st Year Analyst - Summer 2027	28 Aug 26		01 Sep 25			Yes	
+CV
+	Yes	
+
 	Fenchurch Advisory	2027 Graduate Analyst Programme	20 Aug 26		24 Sep 25			Yes	
 CV
 	Yes	
@@ -187,10 +191,6 @@ CV
 CL
 WA
 		
-
-	Harris Williams	2027 M&A Analyst 1			01 Sep 25			Yes	
-CV
-	Yes	
 
 	MUFG	2027 Analyst Programme			01 Sep 25			Yes	
 CV
@@ -741,6 +741,16 @@ CL
 		
  Asset Management
 
+	Schroders	2027 Graduate Programme	28 Aug 26		29 Sep 25	
+OA
+›
+HV
+›
+AC
+	Cut-e	Yes	
+CV
+	No	
+
 	BlackRock	2027 Full-Time Analyst Program - EMEA	30 Jun 26	30 Sep 26	01 Jul 25	
 HV
 ›
@@ -862,16 +872,6 @@ OA
 AC
 		Yes	
 		
-
-	Schroders	2027 Graduate Programme			29 Sep 25	
-OA
-›
-INT
-›
-AC
-	Cut-e	Yes	
-CV
-	No	
 
 	Watkins Jones Group	Graduate Real Estate Analyst			29 Sep 25	
 OA
@@ -996,4 +996,4 @@ CL
 WA
 		
 
-	Franklin Templeton	Junior Analyst - Asset & Portfo
+	Fr
