@@ -7,7 +7,7 @@ Employers
 Account
 UK Finance Tracker
 Get Notifications
-1,105,028 total views / 31,511 views today
+1,124,255 total views / 30,186 views today
 Summer Internships
 Spring Weeks
 Off-Cycle Internships
@@ -30,9 +30,17 @@ Sponsors Visas:
 My Status	Company Name	Programme Name	Opening Date	Closing Date	Last Year Opening	Process	Info & Test Prep	Rolling	Materials	Sponsors Visa	Notes
  Promoted
 
-	Shell	Finance - Graduate Programme 2027	15 Sep 26	15 Dec 26	10 Sep 25			Yes	
+	Shell	Finance - Graduate Programme 2027	15 Sep 26	15 Dec 26	10 Sep 25	
+OA
+›
+HV
+›
+INT
+›
+AC
+		Yes	
 CV
-		
+	Yes	
 
 	AmplifyME	Investing Simulator Challenge 2026	10 Sep 26					Yes	
 		
@@ -168,6 +176,11 @@ HV
 CV
 	Yes	
  Middle Market
+
+	Equiteq	Analyst - Investment Banking M&A	16 Sep 26					Yes	
+CV
+WA
+	Yes	
 
 	Menzies	Graduate Programme 2027 - ACA Deal Advisory	10 Sep 26		14 Sep 25	
 OA
@@ -994,6 +1007,4 @@ CL
 WA
 		
 
-	Access Bank	Graduate Programmes (Investment, Risk & Settlements)			29 Oct 25			Yes	
-CV
-		Investment Operations Officer Is a
+	Access Bank	Graduate Progr
