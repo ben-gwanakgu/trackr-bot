@@ -7,7 +7,7 @@ Employers
 Account
 UK Finance Tracker
 Get Notifications
-1,754,772 total views / 27,145 views today
+1,826,458 total views / 24,182 views today
 Summer Internships
 Spring Weeks
 Off-Cycle Internships
@@ -67,6 +67,9 @@ CV
 WA
 	No	Always open, applications rolling
  Trackr Exclusive
+
+	Trackr	Trackr Academy - Autumn 2026	15 Oct 26	23 Oct 26				Yes	
+	No	
 
 	Welsh Power	2027 Graduate Quantitative Trading Analyst			15 Dec 25			Yes	
 CV
@@ -578,6 +581,10 @@ CV
 	No	
  Buy-Side
 
+	Sagard	VC Investment Analyst - Portage - January 2027	13 Oct 26					Yes	
+CV
+		
+
 	Ccaventus	Investment Analyst Program 2028	09 Oct 26		07 Oct 25			Yes	
 CV
 CL
@@ -913,10 +920,6 @@ CV
 WA
 		
 
-	Franklin Templeton	Futures Rotational Graduate Program - Investment Management	03 Sep 26	01 Dec 26	09 Dec 25			Yes	
-CV
-	No	
-
 	Capital Group	CAP Associate - Europe (2027)	31 Aug 26	01 Nov 26	16 Sep 25			Yes	
 CV
 	Yes	
@@ -1032,4 +1035,4 @@ WA
 
 	Access Bank	Graduate Programmes (Investment, Risk & Settlements)			29 Oct 25			Yes	
 CV
-		Investment Operations Offi
+		
