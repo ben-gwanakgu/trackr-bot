@@ -7,7 +7,7 @@ Employers
 Account
 UK Finance Tracker
 Get Notifications
-1,826,458 total views / 24,182 views today
+1,866,230 total views / 17,786 views today
 Summer Internships
 Spring Weeks
 Off-Cycle Internships
@@ -32,8 +32,8 @@ My Status	Company Name	Programme Name	Opening Date	Closing Date	Last Year Openin
 
 	Bending Spoons	
 Graduate finance programs
-6
-	08 Oct 26		22 Apr 26			Yes	
+7
+	16 Oct 26		22 Apr 26			Yes	
 CV
 	Yes	
 
@@ -274,12 +274,6 @@ CL
 3
 	09 Sep 26	25 Oct 26	01 Sep 25			Yes	
 CV
-		
-
-	Eastdil Secured	2027 Analyst	01 Sep 26	16 Oct 26	01 Sep 25			Yes	
-CV
-CL
-WA
 		
 
 	Macquarie Group	
@@ -564,6 +558,12 @@ AC
 CV
 	No	
 
+	Eastdil Secured	2027 Analyst	01 Sep 26	16 Oct 26	01 Sep 25			Yes	
+CV
+CL
+WA
+		
+
 	Harris Williams	Investment Banking 1st Year Analyst - Summer 2027	28 Aug 26	13 Sep 26	01 Sep 25			Yes	
 CV
 	Yes	
@@ -580,6 +580,10 @@ CV
 CV
 	No	
  Buy-Side
+
+	Aspect Capital	Quantitative Research Analyst	16 Oct 26					Yes	
+CV
+	No	Entry-level, open to graduates
 
 	Sagard	VC Investment Analyst - Portage - January 2027	13 Oct 26					Yes	
 CV
@@ -838,6 +842,20 @@ CV
 		
  Asset Management
 
+	DWS	
+2027 Graduate Program
+3
+	16 Oct 26		11 Sep 25	
+OA
+›
+INT
+›
+AC
+		Yes	
+CV
+CL
+	Yes	
+
 	St James's Place	
 2027 Graduate Programme
 4
@@ -949,18 +967,6 @@ CV
 CL
 		
 
-	DWS	2027 Graduate Program			11 Sep 25	
-OA
-›
-INT
-›
-AC
-		Yes	
-CV
-CL
-WA
-	Yes	
-
 	Evelyn Partners	Graduate Programme (Sept 2027)			17 Sep 25			Yes	
 CV
 CL
@@ -1027,12 +1033,4 @@ CV
 CL
 		Apply via email
 
-	Legal & General	Analyst			23 Oct 25			Yes	
-CV
-CL
-WA
-		
-
-	Access Bank	Graduate Programmes (Investment, Risk & Settlements)			29 Oct 25			Yes	
-CV
-		
+	Legal & General	Analyst			23 Oct
