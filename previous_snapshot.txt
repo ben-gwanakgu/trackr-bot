@@ -7,7 +7,7 @@ Employers
 Account
 UK Finance Tracker
 Get Notifications
-1,903,758 total views / 22,328 views today
+1,934,247 total views / 24,321 views today
 Summer Internships
 Spring Weeks
 Off-Cycle Internships
@@ -32,7 +32,7 @@ My Status	Company Name	Programme Name	Opening Date	Closing Date	Last Year Openin
 
 	Bending Spoons	
 Graduate finance programs
-7
+5
 	16 Oct 26		22 Apr 26			Yes	
 CV
 	Yes	
@@ -215,7 +215,7 @@ Graduate Analyst Programme 2027
 7
 	05 Oct 26		01 Oct 25		Cut-e	Yes	
 CV
-		
+	Yes	
 
 	Lloyds Banking Group	
 2027 Graduate Scheme
@@ -385,7 +385,7 @@ CV
 
 	Commerzbank	2027 Graduate Programme			09 Nov 25			Yes	
 CV
-		
+	Yes	
 
 	Clearwater	Graduate Programme 2027			16 Nov 25	
 OA
@@ -466,7 +466,7 @@ AC
 AC
 		Yes	
 CV
-		
+	Yes	
 
 	Wells Fargo	Asset Backed Finance Graduate Analyst			24 Dec 25		Proprietary	Yes	
 CV
@@ -537,7 +537,7 @@ Future Talents Graduate Program
 7
 	16 Sep 26	04 Oct 26			SOVA > SHL	Yes	
 CV
-		
+	No	
 
 	JLL	2027 Capital Markets Graduate	10 Sep 26	08 Oct 26	15 Sep 25		Pymetrics	Yes	
 CV
@@ -562,7 +562,7 @@ CV
 CV
 CL
 WA
-		
+	Yes	
 
 	Harris Williams	Investment Banking 1st Year Analyst - Summer 2027	28 Aug 26	13 Sep 26	01 Sep 25			Yes	
 CV
@@ -581,9 +581,13 @@ CV
 	No	
  Buy-Side
 
+	Capula Investment Management	Capula Analyst Programme	20 Oct 26		16 Jan 26			Yes	
+CV
+	Yes	
+
 	Aspect Capital	Quantitative Research Analyst	16 Oct 26					Yes	
 CV
-	No	Entry-level, open to graduates
+	Yes	Entry-level, open to graduates
 
 	Sagard	VC Investment Analyst - Portage - January 2027	13 Oct 26					Yes	
 CV
@@ -695,7 +699,7 @@ WA
 
 	Brevan Howard	2027 Graduate Programme – Risk & Treasury, London			23 Sep 25			Yes	
 CV
-		
+	Yes	
 
 	HarbourVest	Analyst, Transactions			02 Oct 25				
 CV
@@ -805,12 +809,7 @@ CV
 CV
 CL
 WA
-		
-
-	Capula Investment Management	Risk Graduate			16 Jan 26			Yes	
-CV
-WA
-	Yes	
+	No	
 
 	Valsoft Corporation	Investment Associate - Full Cycle M&A			17 Jan 26			Yes	
 CV
@@ -1023,6 +1022,6 @@ CL
 CV
 CL
 WA
-		
+	No	
 
-	Access Bank	Graduate Programmes (Investment, Risk & Settlements
+	Access Bank	Graduate Pro
