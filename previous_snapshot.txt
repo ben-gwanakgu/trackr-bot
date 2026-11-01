@@ -7,7 +7,7 @@ Employers
 Account
 UK Finance Tracker
 Get Notifications
-2,080,309 total views / 20,148 views today
+2,135,567 total views / 8,301 views today
 Summer Internships
 Spring Weeks
 Off-Cycle Internships
@@ -53,9 +53,7 @@ CV
 		
 
 	AlphaSights	Associate, Client Service, 2027	15 Jun 26		27 Jul 25	
-INT
-›
-2x AC
+3x INT
 		Yes	
 CV
 CL
@@ -112,13 +110,6 @@ Full Time Analyst 2027
 CV
 		
 
-	Barclays	
-Graduate Programme 2027
-10
-	29 Aug 26	28 Oct 26	30 Aug 25		SHL	Yes	
-CV
-	Yes	
-
 	Goldman Sachs	2027 New Analyst Programme			01 Jul 25		Goldman Sachs Prep	Yes	
 CV
 CL
@@ -135,6 +126,13 @@ Graduate Analyst Programme 2027
 CV
 CL
 WA
+	Yes	
+
+	Barclays	
+Graduate Programme 2027
+10
+	29 Aug 26	28 Oct 26	30 Aug 25		SHL	Yes	
+CV
 	Yes	
  Elite Boutique
 
@@ -245,6 +243,11 @@ INT
 CV
 	No	
 
+	Equiteq	Analyst - Investment Banking M&A	16 Sep 26					Yes	
+CV
+WA
+	Yes	
+
 	Menzies	Graduate Programme 2027 - ACA Deal Advisory	10 Sep 26		14 Sep 25	
 OA
 ›
@@ -347,7 +350,7 @@ CV
 	03 Oct 26	04 Oct 26	29 Oct 25		Cut-e	Yes	
 CV
 CL
-	Yes	
+	No	
 
 	Goodbody	Graduate Programme 2027 - 2029			30 Oct 25			Yes	
 CV
@@ -518,11 +521,6 @@ CV
 CL
 	Yes	
 
-	Equiteq	Analyst - Investment Banking M&A	16 Sep 26	16 Sep 26				Yes	
-CV
-WA
-	Yes	
-
 	Santander	
 Future Talents Graduate Program
 7
@@ -586,6 +584,10 @@ CV
 	No	
  Buy-Side
 
+	Patrizia	Investment Management Analyst	30 Oct 26					Yes	
+CV
+		
+
 	Capula Investment Management	Capula Analyst Programme	20 Oct 26		16 Jan 26			Yes	
 CV
 	Yes	
@@ -598,17 +600,6 @@ CV
 CV
 CL
 		
-
-	Blackstone	
-2027 Analyst Programme
-2
-	16 Sep 26	28 Oct 26	06 Nov 25	
-INT
-›
-2x AC
-	Pymetrics	Yes	
-CV
-	Yes	
 
 	Marshall Wace	Quant Research - Associate Programme - 2027	14 Sep 26		30 Aug 25			Yes	
 CV
@@ -827,6 +818,17 @@ CL
 CV
 		
 
+	Blackstone	
+2027 Analyst Programme
+2
+	16 Sep 26	28 Oct 26	06 Nov 25	
+INT
+›
+2x AC
+	Pymetrics	Yes	
+CV
+	Yes	
+
 	EQT	Analyst	04 Sep 26	21 Sep 26				Yes	
 CV
 CL
@@ -878,11 +880,6 @@ CV
 CV
 CL
 WA
-		
-
-	Janus Henderson	Investment Graduate Programme 2027	21 Sep 26	31 Oct 26	30 Sep 25			Yes	
-CV
-CL
 		
 
 	BNY Mellon	
@@ -1015,4 +1012,9 @@ CV
 WA
 		
 
-	GIB Asset Management	2027 Graduate Analyst Scheme	
+	GIB Asset Management	2027 Graduate Analyst Scheme			17 Oct 25			Yes	
+CV
+CL
+		Apply via email
+
+	Lega
